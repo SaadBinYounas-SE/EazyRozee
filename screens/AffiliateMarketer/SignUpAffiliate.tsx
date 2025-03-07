@@ -1,9 +1,8 @@
-import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const SellerSignUp = ({ navigation }: { navigation: any }): React.JSX.Element => {
+const SignUpAffiliate = () => {
     return (
         <ScrollView contentContainerStyle={styles.container}>
             {/* Logo */}
@@ -55,7 +54,7 @@ const SellerSignUp = ({ navigation }: { navigation: any }): React.JSX.Element =>
             </TouchableOpacity>
 
             {/* Become a Seller Button */}
-            <TouchableOpacity style={styles.button}   onPress={() => navigation.navigate('SellerTabNavigator')}>
+            <TouchableOpacity style={styles.button}>
                 <Text style={styles.buttonText}>Become a Seller</Text>
             </TouchableOpacity>
         </ScrollView>
@@ -120,4 +119,4 @@ const styles = StyleSheet.create({
     },
 });
 
-export default SellerSignUp;
+export default SignUpAffiliate;

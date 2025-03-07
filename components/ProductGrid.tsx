@@ -9,6 +9,7 @@ import {
 } from 'react-native';
 import AntDesign from "react-native-vector-icons/AntDesign";
 import { NavigationProp } from '@react-navigation/native';
+import Ionicons from "react-native-vector-icons/Ionicons";
 
 interface Product {
     id: string;
@@ -21,12 +22,13 @@ interface Product {
 }
 
 interface Props {
+  showFilledHeart?: boolean;
   navigation: any;
   onProductClick: (product: Product) => void;
 }
 
 
-const Products: React.FC<Props> = ({ navigation,onProductClick }) => {
+const Products: React.FC<Props> = ({ navigation,onProductClick,showFilledHeart }) => {
     const categories: string[] = ["Category 1", "Category 2", "Category 3", "Category 4", "Category 5","Category 6","Category 7"];
 
 
@@ -62,7 +64,11 @@ const Products: React.FC<Props> = ({ navigation,onProductClick }) => {
                          <Text style={style.postPrice}>{item.price}</Text>
                      </View>
                      <TouchableOpacity style={style.heartButton}>
-                         <AntDesign name="hearto" size={20} color="red" />
+                         <AntDesign
+                           name={showFilledHeart ? 'heart' : 'hearto'} // Show filled or outlined heart
+                           size={20}
+                           color={showFilledHeart ? 'red' : '#000'} // Red for filled, black for outlined
+                         />
                      </TouchableOpacity>
                  </TouchableOpacity>
              )}

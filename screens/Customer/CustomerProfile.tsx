@@ -1,8 +1,10 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const CustomerProfileScreen = () => {
+  const navigation = useNavigation();
   return (
     <ScrollView style={styles.container}>
       {/* Header */}
@@ -52,10 +54,11 @@ const CustomerProfileScreen = () => {
       <View style={styles.separator} />
 
       {/* Switch To Section */}
-      <Text style={styles.switchToText}>Switch To</Text>
+      <Text style={styles.switchToText}>Become a</Text>
       <View style={styles.roleButtonsContainer}>
-        <TouchableOpacity style={[styles.roleButton, styles.customerButton]}>
-          <Text style={styles.roleText}>Customer</Text>
+        <TouchableOpacity style={[styles.roleButton, styles.customerButton]}  
+         onPress={() => navigation.getParent()?.navigate('SignUpSeller')}>
+          <Text style={styles.roleText}>Seller</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.roleButton, styles.affiliateButton]}>
           <Text style={styles.roleText}>Affiliate Marketer</Text>
@@ -67,8 +70,8 @@ const CustomerProfileScreen = () => {
 
 const styles = StyleSheet.create({
   container: { flex: 1, backgroundColor: "#fff", padding: 20 },
-  title: { fontSize: 24, fontWeight: "bold", textAlign: "center", marginBottom: 10 },
-  divider: { height: 2, backgroundColor: "#253A3D", marginVertical: 15 },
+  title: { fontSize: 24, fontWeight: "bold", textAlign: "center", marginBottom: 5 },
+  divider: { height: 2, backgroundColor: "#253A3D", marginBottom: 10},
   profilePicContainer: { alignItems: 'center', marginVertical: 10 },
   profilePic: { width: 100, height: 100, borderRadius: 50 },
   changeProfileText: { color: 'blue', marginTop: 5 },

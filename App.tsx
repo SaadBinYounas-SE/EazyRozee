@@ -1,13 +1,13 @@
 import React from 'react';
 import { NavigationContainer } from '@react-navigation/native'; // React Navigation
 import { createStackNavigator } from '@react-navigation/stack'; // Stack Navigator
-// import SellerHomeScreen from './screens/sellerHomeScreen';
-// import type {PropsWithChildren} from 'react';
-// import{ Text, View } from 'react-native';
 import CustomerTabNavigator from './screens/TabNavigators/CustomerTabNavigator';
-// import SellerSignUp from './screens/Seller/SignUpSeller';
 import LoginCustomer from './screens/Customer/LogIn';
 import SignupCustomer from './screens/Customer/SignUp';
+import SignUpSeller from './screens/Seller/SignUpSeller';
+import SignUpAffiliate from './screens/AffiliateMarketer/SignUpAffiliate';
+import SellerTabNavigator from './screens/TabNavigators/SellerTabNavigator';
+
 
 const Stack = createStackNavigator();
 
@@ -18,6 +18,10 @@ const App = () => {
         <Stack.Screen name="LogIn" component={LoginCustomer} />
         <Stack.Screen name="SignUp" component={SignupCustomer} />
         <Stack.Screen name="CustomerTabNavigator" component={CustomerTabNavigator} /> 
+        <Stack.Screen name="SignUpSeller" component={SignUpSeller} />
+        <Stack.Screen name="AffiliateSignUp" component={SignUpAffiliate} />
+        <Stack.Screen name="SellerTabNavigator" component={SellerTabNavigator} /> 
+
       </Stack.Navigator>
     </NavigationContainer>
   );

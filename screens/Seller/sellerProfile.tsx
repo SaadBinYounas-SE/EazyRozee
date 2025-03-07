@@ -1,8 +1,11 @@
+import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, ScrollView, StyleSheet } from 'react-native';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 const SellerProfileScreen = () => {
+    const navigation = useNavigation();
+  
   return (
     <ScrollView style={styles.container}>
       {/* Header */}
@@ -54,7 +57,8 @@ const SellerProfileScreen = () => {
       {/* Switch To Section */}
       <Text style={styles.switchToText}>Switch To</Text>
       <View style={styles.roleButtonsContainer}>
-        <TouchableOpacity style={[styles.roleButton, styles.customerButton]}>
+        <TouchableOpacity style={[styles.roleButton, styles.customerButton]}
+         onPress={() => navigation.getParent()?.navigate('LogIn')}>
           <Text style={styles.roleText}>Customer</Text>
         </TouchableOpacity>
         <TouchableOpacity style={[styles.roleButton, styles.affiliateButton]}>
