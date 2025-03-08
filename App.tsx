@@ -7,6 +7,7 @@ import SignupCustomer from './screens/Customer/SignUp';
 import SignUpSeller from './screens/Seller/SignUpSeller';
 import SignUpAffiliate from './screens/AffiliateMarketer/SignUpAffiliate';
 import SellerTabNavigator from './screens/TabNavigators/SellerTabNavigator';
+import AffiliateTabNavigator from './screens/TabNavigators/AffiliateTabNavigator';
 
 
 const Stack = createStackNavigator();
@@ -19,8 +20,10 @@ const App = () => {
         <Stack.Screen name="SignUp" component={SignupCustomer} />
         <Stack.Screen name="CustomerTabNavigator" component={CustomerTabNavigator} /> 
         <Stack.Screen name="SignUpSeller" component={SignUpSeller} />
-        <Stack.Screen name="AffiliateSignUp" component={SignUpAffiliate} />
+        <Stack.Screen name="SignUpAffiliate" component={SignUpAffiliate} />
         <Stack.Screen name="SellerTabNavigator" component={SellerTabNavigator} /> 
+        <Stack.Screen name="AffiliateTabNavigator" component={AffiliateTabNavigator} /> 
+
 
       </Stack.Navigator>
     </NavigationContainer>

@@ -60,7 +60,8 @@ const CustomerProfileScreen = () => {
          onPress={() => navigation.getParent()?.navigate('SignUpSeller')}>
           <Text style={styles.roleText}>Seller</Text>
         </TouchableOpacity>
-        <TouchableOpacity style={[styles.roleButton, styles.affiliateButton]}>
+        <TouchableOpacity style={[styles.roleButton, styles.affiliateButton]}
+          onPress={() => navigation.getParent()?.navigate('SignUpAffiliate')}>
           <Text style={styles.roleText}>Affiliate Marketer</Text>
         </TouchableOpacity>
       </View>

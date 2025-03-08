@@ -41,11 +41,11 @@ const AffiliateHome: React.FC<Props> = ({ navigation }) => {
     };
 
     const posts: Product[] = [
-        { id: '1', image: require('../images/postPic.jpeg'), name: 'Product 1', rating: 1.5, price: '$25', commission: '$5', description: 'lorem ipsum' },
-        { id: '2', image: require('../images/postPic.jpeg'), name: 'Product 2', rating: 3.0, price: '$30', commission: '$6', description: 'lorem ipsum' },
-        { id: '3', image: require('../images/postPic.jpeg'), name: 'Product 3', rating: 4.2, price: '$20', commission: '$4', description: 'lorem ipsum' },
-        { id: '4', image: require('../images/postPic.jpeg'), name: 'Product 4', rating: 4.7, price: '$15', commission: '$3', description: 'lorem ipsum' },
-        { id: '5', image: require('../images/postPic.jpeg'), name: 'Product 5', rating: 5.0, price: '$40', commission: '$8', description: 'lorem ipsum' },
+        { id: '2', image: require('../../assets/postPic.jpg'), name: 'Product 2', rating: 3.0, price: '$30', commission: '$6', description: 'lorem ipsum' },
+        { id: '3', image: require('../../assets/postPic.jpg'), name: 'Product 3', rating: 4.2, price: '$20', commission: '$4', description: 'lorem ipsum' },
+        { id: '1', image: require('../../assets/postPic.jpg'), name: 'Product 1', rating: 1.5, price: '$25', commission: '$5', description: 'lorem ipsum' },
+        { id: '4', image: require('../../assets/postPic.jpg'), name: 'Product 4', rating: 4.7, price: '$15', commission: '$3', description: 'lorem ipsum' },
+        { id: '5', image: require('../../assets/postPic.jpg'), name: 'Product 5', rating: 5.0, price: '$40', commission: '$8', description: 'lorem ipsum' },
     ];
 
     return (
@@ -66,7 +66,7 @@ const AffiliateHome: React.FC<Props> = ({ navigation }) => {
                 </View>
 
                 <TouchableOpacity>
-                    <Image source={require("../images/logo.jpeg")} style={style.logo} />
+                    <Image source={require("../../assets/logo.png")} style={style.logo} />
                 </TouchableOpacity>
             </View>
 
@@ -173,7 +173,7 @@ const style = StyleSheet.create({
     postRating: { fontSize: 14, color: 'gray' },
     postPrice: { fontSize: 16, fontWeight: 'bold', marginVertical: 5 },
     heartButton: { position: 'absolute', bottom: 10, right: 10 },
-    postCommission: { fontSize: 14, color: 'green', fontWeight: 'bold' },
+    postCommission: { fontSize: 14, color: "#253A3D", fontWeight: 'bold' },
 });
 
 export default AffiliateHome;

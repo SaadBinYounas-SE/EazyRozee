@@ -2,7 +2,7 @@ import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet, ScrollView } from 'react-native';
 import Icon from 'react-native-vector-icons/Ionicons';
 
-const SignUpAffiliate = () => {
+const SignUpAffiliate= ({ navigation }: { navigation: any }): React.JSX.Element => {
     return (
         <ScrollView contentContainerStyle={styles.container}>
             {/* Logo */}
@@ -13,7 +13,7 @@ const SignUpAffiliate = () => {
             />
 
             {/* Title */}
-            <Text style={styles.title}>Make a Seller Account</Text>
+            <Text style={styles.title}>Make a Affiliate Account</Text>
 
             {/* Input Fields */}
             <TextInput
@@ -28,10 +28,6 @@ const SignUpAffiliate = () => {
             />
             <TextInput
                 style={styles.input}
-                placeholder="Store Name"
-            />
-            <TextInput
-                style={styles.input}
                 placeholder="CNIC Number"
                 keyboardType="numeric"
             />
@@ -40,22 +36,16 @@ const SignUpAffiliate = () => {
                 placeholder="Address"
                 multiline
             />
-
-            {/* Profile Photo Upload */}
-            <TouchableOpacity style={styles.uploadSection}>
-                <Icon name="camera-outline" size={24} color="#253A3D" />
-                <Text style={styles.uploadText}>Attach a Profile Photo</Text>
-            </TouchableOpacity>
-
             {/* Cover Photo Upload */}
             <TouchableOpacity style={styles.uploadSection}>
                 <Icon name="image-outline" size={24} color="#253A3D" />
-                <Text style={styles.uploadText}>Attach a Cover Photo</Text>
+                <Text style={styles.uploadText}>Attach a CNIC Photo</Text>
             </TouchableOpacity>
 
             {/* Become a Seller Button */}
-            <TouchableOpacity style={styles.button}>
-                <Text style={styles.buttonText}>Become a Seller</Text>
+            <TouchableOpacity style={styles.button}
+             onPress={() => navigation.navigate('AffiliateTabNavigator')}>
+                <Text style={styles.buttonText}>Become a Affiliate Marketer</Text>
             </TouchableOpacity>
         </ScrollView>
     );

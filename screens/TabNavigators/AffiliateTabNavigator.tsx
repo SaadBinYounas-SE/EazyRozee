@@ -3,13 +3,13 @@ import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import Ionicons from 'react-native-vector-icons/Ionicons';
 
 // Import your screens
-import AffiliateHome from './AffiliateHomeScreen'; // Adjust path as needed
-import Collaborators from './SellerStore'; // Renamed for Affiliate context
-import Generate from './AddNewProduct'; // Renamed for Affiliate context
-import Analytics from './SellerAnalytics';
-import Profile from './SellerProfile';
+import AffiliateHome from '../AffiliateMarketer/AffiliateHomeScreen'; // Adjust path as needed
+import Collaborators from '../AffiliateMarketer/Collaborators'; // Renamed for Affiliate context
+import Generate from '../AffiliateMarketer/URLGenerator'; // Renamed for Affiliate context
+import Analytics from '../AffiliateMarketer/AffiliateAnalytics';
+import Profile from '../AffiliateMarketer/AffiliateProfile';
 import { createStackNavigator } from '@react-navigation/stack';
-import ProductDetail, { Product } from './SellerProductDetailScreen';
+import ProductDetail, { Product } from '../AffiliateMarketer/ProductDetailAffiliate';
 
 const Tab = createBottomTabNavigator();
 
